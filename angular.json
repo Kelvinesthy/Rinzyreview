@@ -21,12 +21,20 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*", "input": "node_modules/tinymce/skins", "output": "/skins/" },
+              { "glob": "**/*", "input": "node_modules/tinymce/themes", "output": "/themes/" },
+              { "glob": "**/*", "input": "node_modules/tinymce/plugins", "output": "/plugins/" }
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/slicknav/dist/jquery.slicknav.min.js",
+              "./node_modules/tinymce/tinymce.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "RinzyReview"
+    }
+  },
+  "defaultProject": "RinzyReview",
+  "cli": {
+    "analytics": false
+  }
 }

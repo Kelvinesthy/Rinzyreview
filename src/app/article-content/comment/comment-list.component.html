@@ -1,0 +1,14 @@
+<div class="row mx-1 mb-5 p-2" *ngFor ="let comment of comments">
+  <div class="col-md-6 sect p-2">
+    <div class="well">
+      <h4 class="font-weight-bold">{{comment.name}}</h4>
+      <div class="container">
+        <div class="timesection">
+          <p>Commented on <span>August 22, 2021</span> By <span>5:36pm</span></p>
+        </div>
+        <h6 class="commentdetails">{{comment.commentdetail}}</h6>
+      </div>
+
+    </div>
+  </div>
+</div>

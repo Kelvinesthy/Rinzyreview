@@ -1,0 +1,37 @@
+<div class="container-sm">
+  <div class="jumbotron">
+    <div>
+      <h4 class="text-white text-uppercase">{{article.header}}</h4>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="tags">
+    <div><span class="p-1 tv-series">{{article.tags}}</span><span class="p-1 romance">Romance</span><span class="p-1 movies">Movies</span></div>
+  </div>
+  <div class="article-content">
+    <div class="article-image">
+      <img src="{{article.imageUrl}}" class="img-fluid" alt="{{article.header}}">
+    </div>
+    <div class="article-content-details">{{article.content}}</div>
+  </div>
+
+  <div class="commentSection my-4 mx-2">
+    <div class="row">
+      <div class="px-2">
+        <h5>Reviews</h5>
+      </div> ||
+      <div class="px-2">
+        <a (click)='addComment()' type="button">
+          Comment
+        </a>
+      </div>
+    </div>
+  </div>
+  <comment-list *ngIf="!addMode" [comments]="article?.comments"></comment-list>
+
+  <div class="">
+    <comment-root *ngIf="addMode" (saveNewComment)="saveNewComment($article)" (cancelAddComment)="cancelAddComment()"></comment-root>
+  </div>
+
+</div>

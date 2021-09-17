@@ -1,0 +1,134 @@
+.tags span{
+  background-color: red;
+  margin-left: 5px;
+}
+.tags{
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+}
+.tags .romance{
+  background-color: green;
+}
+.tags .tv-series{
+  background-color: yellow;
+}
+.tags .comdey{
+  background-color: brown;
+}
+.tags .general{
+  background-color: blue;
+}
+.tags span:first-child{
+  margin-left: 0px;
+}
+.rinzyreviews-private-section-text, .rinzyreviews-private-section h3, .rinzyreviews-private-section .date,
+.carousel-caption p, .carousel-caption h3, .rinzyreviews-article-section h4, .rinzyreviews-article-section .article-subsection,
+.article-heading h6, .article-subheading{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rinzyreviews-article-section{
+  margin-top: 10px;
+}
+.rinzyreviews-article-section .date{
+  margin-bottom: 0rem;
+  margin-top: 25px;
+  font-size: medium;
+}
+a .rinzyreviews-article-section h4, a .rinzyreviews-article-section .article-subsection,
+a .rinzyreviews-article-section .date, a .rinzyreviews-article-section h6, .article-subsection, .date{
+  color: black;
+}
+a .rinzyreviews-article-section h4:hover, a .rinzyreviews-article-section h6:hover{
+  color:  rgb(202, 92, 0);
+  text-decoration: underline;
+}
+a .rinzyreviews-article-section .article-subsection:hover, a .rinzyreviews-article-section .date:hover, a{
+  text-decoration: none;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+  .img-fluid{
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .rinzyreviews-article-section h3{
+    margin-top: 25px;
+  }
+  .rinzyreviews-article-section .article-subsection{
+    margin-top: 15px;
+    font-size: medium;
+  }
+}
+@media only screen and (min-width: 992px){
+  .hidden-md{
+  display: none;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
+  .rinzyreviews-article-section h4{
+    font-size: large;
+  }
+  .tags{
+    margin-bottom: 15px;
+  }
+  .tags span{
+    margin-left: 2px;
+  }
+  .hidden-sm{
+    display: none;
+  }
+  .rinzyreviews-article-section .date{
+    margin-bottom: 0rem;
+    margin-top: 5px;
+  }
+  .rinzyreviews-article-section{
+    margin-top: 0px;
+  }
+  .img-fluid{
+    height: auto;
+  }
+}
+@media only screen and (min-width: 768px){
+
+}
+@media only screen and (max-width: 767px){
+  p{
+    font-size: 0.6rem;
+  }
+  .display-sm{
+    display: none;
+  }
+  .hidden-xs{
+    display: none;
+  }
+  .img-fluid{
+    height: auto;
+    width: -webkit-fill-available;
+  }
+  .tags{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+  .tags span{
+    margin-left: 1;
+    font-size: xx-small;
+  }
+  .col-12{
+    padding: 0px;
+  }
+  .reviews .tags{
+    margin-top: auto;
+  }
+  article{
+    padding-top: 13px;
+  }
+  .date{
+    font-size: smaller;
+  }
+  .article-subsection{
+    font-size: small;
+  }
+}

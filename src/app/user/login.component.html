@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-3 col-lg-2 col-md-1 col-0"></div>
+    <div class="col-xl-6 col-lg-8 col-md-10 col-0">
+      <div class="container login-section">
+        <div class="login-background">
+          <h4 class="font-weight-bold">Adminstration login</h4>
+          <div class="container">
+            <form #loginForm="ngForm" (ngSubmit)="login($event)" autocomplete="off" novalidate>
+              <div class="form-group pt-5">
+                <label for="userName" class="font-weight-bolder">Username <span>*</span></label>
+                <input (ngModel)="username" type="text" required name="userName" id="username" class="form-control ml-4">
+              </div>
+              <div class="form-group pb-2">
+                <label for="password" class="font-weight-bolder">Password <span>*</span></label>
+                <em *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched || mouseoverlogin)"> Required</em>
+                <input (ngModel)="password" type="password" required name="password" id="password" class="form-control ml-4">
+              </div>
+              <div class="button-group float-right">
+                <span (mouseenter)="mouseoverlogin=true" (mouseleave)="mouseoverlogin=false">
+                  <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Login</button>
+                </span>
+                <button type="button" (click)="cancel()" class="btn btn-danger ml-2">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-2 col-md-1 col-0"></div>
+  </div>
+</div>

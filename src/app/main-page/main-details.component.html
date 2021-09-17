@@ -1,0 +1,284 @@
+<div *ngFor= 'let article of articles'>
+  <div class="hidden-xs hidden-sm"> <!--(<=992px) laptop version-->
+    <a [routerLink]="['/articles', article.header]">
+      <article class="pt-3 pb-3 container">
+        <div class="">
+          <div class="row">
+            <img src="{{article.imageUrl}}" class="img-fluid col-6 pr-1 rounded" alt="palm spring">
+            <div class="col-6 pl-2">
+              <div class="tags">
+                <div class="p-1">{{article.tags}}</div>
+              </div>
+              <div class="rinzyreviews-article-section">
+                <h4 class="text-capitalize font-weight-bolder">{{article.header}}</h4>
+                <p class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+                  that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+                </p>
+                <p class="date">{{article.date}}<span class="actor font-weight-bold">By Talius Dike</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </a>
+  </div>
+  <div class="hidden-md hidden-xs"> <!--(768px to 991px ipad version)-->
+    <a href="">
+      <article class="container p-4">
+        <div class="">
+          <div class="row">
+            <img src="../../assets/IMG-20200723-WA0044.jpg" class="img-fluid rounded col-6" alt="palm spring">
+            <div class="col-6">
+              <div class="tags">
+                <div><span class="p-1">Movies</span></div>
+              </div>
+              <div class="rinzyreviews-article-section">
+                <h4 class="text-capitalize  font-weight-bolder">palm spring optimatization</h4>
+                <p class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+                  that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+                </p>
+                <p class="date">November 4, 2021 <span class="actor font-weight-bold pl-2">By Talius Dike</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </a>
+    <a href="">
+      <article class="container p-3">
+        <div class="">
+          <div class="row">
+            <img src="../../assets/IMG-20200723-WA0033.jpg" class="img-fluid rounded col-6" alt="palm spring">
+            <div class="col-6">
+              <div class="tags">
+                <div><span class="p-1 tv-series">Tv-series</span></div>
+              </div>
+              <div class="rinzyreviews-article-section">
+                <h4 class="text-capitalize font-weight-bolder">Marvel will always be best studio after avengers sold-out collection </h4>
+                <p class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+                  that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+                </p>
+                <p class="date">November 4, 2021 <span class="actor font-weight-bold pl-2">By Talius Dike</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </a>
+    <a href="">
+      <article class="container p-3">
+        <div class="">
+          <div class="row">
+              <img src="../../assets/IMG-20200723-WA0026.jpg" class="img-fluid rounded col-6" alt="palm spring">
+            <div class="col-6">
+              <div class="tags">
+                <div><span class="p-1">Movies</span><span class="p-1 romance">romance</span></div>
+              </div>
+              <div class="rinzyreviews-article-section">
+                <h4 class="text-capitalize font-weight-bolder">Suicide squad unknown state might be an unknown disasters looming for the DC universe as a whole.</h4>
+                <p class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+                  that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+                </p>
+                <p class="date">November 4, 2021 <span class="actor font-weight-bold pl-2">By Talius Dike</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </a>
+    <a href="">
+      <article class="container p-3">
+        <div class="">
+          <div class="row">
+            <div class="col-6">
+              <div class="tags">
+                <div><span class="p-1">Movies</span><span class="p-1 movie">Movies</span></div>
+              </div>
+              <div class="rinzyreviews-article-section">
+                <h4 class="text-capitalize font-weight-bolder">Batman undecided fate continues in the next century</h4>
+                <p class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+                  that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+                </p>
+                <p class="date">November 4, 2021 <span class="actor font-weight-bold pl-2">By Talius Dike</span></p>
+              </div>
+            </div>
+            <img src="../../assets/IMG-20200723-WA0038.jpg" class="img-fluid rounded col-6" alt="palm spring">
+          </div>
+        </div>
+      </article>
+    </a>
+    <a href="">
+      <article class="container p-3">
+        <div class="">
+          <div class="row">
+            <img src="../../assets/scale.jpeg" class="img-fluid rounded col-6" alt="palm spring">
+            <div class="col-6">
+              <div class="tags">
+                <div><span class="p-1 general">General</span></div>
+              </div>
+              <div class="rinzyreviews-article-section">
+                <h4 class="text-capitalize font-weight-bolder">Can Dc universe maintain the  best reviews for aquman 2</h4>
+                <p class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+                  that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+                </p>
+                <p class="date">November 4, 2021 <span class="actor font-weight-bold pl-2">By Talius Dike</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </a>
+    <a href="">
+      <article class="container p-4">
+        <div class="">
+          <div class="row">
+            <img src="../../assets/john-wick-keanu.jpg" class="img-fluid rounded col-6" alt="palm spring">
+            <div class="col-6">
+              <div class="tags p-2">
+                <div><span class="p-1">Movies</span><span class="p-1 comdey">Comdey</span></div>
+              </div>
+              <div class="rinzyreviews-article-section">
+                <h4 class="text-capitalize font-weight-bolder">Can John wick francise get any better</h4>
+                <p class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+                  that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+                </p>
+                <p class="date">November 4, 2021 <span class="actor font-weight-bold pl-2">By Talius Dike</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </a>
+  </div>
+  <div class="hidden-md hidden-sm"> <!--(>= 767px mobile version)-->
+    <a href="">
+      <div class="container reviews">
+        <article>
+          <div class="tags">
+            <div><span class="p-1">Movies</span></div>
+          </div>
+          <div class="row">
+            <div class="col-6 pr-0 rinzyreviews-article-section">
+              <h6 class="text-capitalize font-weight-bolder pt-1">Suicide squad unknown state might be an unknown disasters looming for the DC universe as a whole.</h6>
+            </div>
+            <img class="img-fluid col-6 pl-0" src="../../assets/IMG-20200723-WA0044.jpg" alt="">
+          </div>
+          <div class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+            that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+          </div>
+          <div class="pt-2 date">
+            <span class="actor font-weight-bold">By Talius Dike</span> 1 Hour Ago
+          </div>
+        </article>
+      </div>
+    </a>
+    <a href="">
+      <div class="container reviews">
+        <article>
+          <div class="tags">
+            <div><span class="p-1 tv-series">Tv-series</span></div>
+          </div>
+          <div class="row">
+            <div class="col-6 pr-0 rinzyreviews-article-section">
+              <h6 class="text-capitalize font-weight-bolder pt-1">Marvel will always be best studio after avengers sold-out collection </h6>
+            </div>
+            <img class="img-fluid pl-0 col-6" src="../../assets/IMG-20200723-WA0033.jpg" alt="">
+          </div>
+          <div class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+            that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+          </div>
+          <div class="pt-2 date">
+            <span class="actor font-weight-bold pr-2">By Talius Dike</span> 1 Hour Ago
+          </div>
+        </article>
+      </div>
+    </a>
+    <a href="">
+      <div class="container reviews">
+        <article>
+          <div class="tags">
+            <div><span class="p-1">Movies</span> <span class="p-1 romance">Romance</span></div>
+          </div>
+          <div class="row">
+            <div class="col-6 pr-0 rinzyreviews-article-section">
+              <h6 class="text-capitalize font-weight-bolder pt-1">Suicide squad unknown state might be an unknown disasters looming for the DC universe as a whole.</h6>
+            </div>
+              <img class="img-fluid pl-0 col-6" src="../../assets/IMG-20200723-WA0026.jpg" alt="">
+          </div>
+          <div class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+            that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+          </div>
+          <div class="pt-2 date">
+            <span class="actor font-weight-bold pr-2">By Talius Dike</span> 1 Hour Ago
+          </div>
+        </article>
+      </div>
+    </a>
+    <a href="">
+      <div class="container reviews">
+        <article>
+          <div class="tags">
+            <div><span class="p-1">Movies</span></div>
+          </div>
+          <div class="row">
+            <div class="col-6 pr-0 rinzyreviews-article-section">
+              <h6 class="text-capitalize font-weight-bolder pt-1">Batman undecided fate continues in the next century</h6>
+            </div>
+            <img class="img-fluid col-6 pl-0" src="../../assets/IMG-20200723-WA0038.jpg" alt="">
+          </div>
+          <div class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+            that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+          </div>
+          <div class="pt-2 date">
+            <span class="actor font-weight-bold pr-2">By Talius Dike</span> 1 Hour Ago
+          </div>
+        </article>
+      </div>
+    </a>
+    <a href="">
+      <div class="container reviews">
+        <article>
+          <div class="tags">
+            <div><span class="p-1 general">General</span></div>
+          </div>
+          <div class="row">
+            <div class="col-6 pr-0 rinzyreviews-article-section">
+              <h6 class="text-capitalize font-weight-bolder pt-1">Suicide squad unknown state might be an unknown disasters looming for the DC universe as a whole.</h6>
+            </div>
+            <img class="img-fluid col-6 pl-0" src="../../assets/scale.jpeg" alt="">
+          </div>
+          <div class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+            that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+          </div>
+          <div class="pt-2 date">
+            <span class="actor font-weight-bold pr-2">By Talius Dike</span> 1 Hour Ago
+          </div>
+        </article>
+      </div>
+    </a>
+    <a href="">
+      <div class="container reviews">
+        <article>
+          <div class="tags">
+            <div><span class="p-1">Movies</span><span class="p-1 comdey">Comedy</span></div>
+          </div>
+          <div class="row">
+            <div class="col-6 pr-0 rinzyreviews-article-section">
+              <h6 class="text-capitalize font-weight-bolder pt-1">Can John wick francise get any better</h6>
+            </div>
+            <img class="img-fluid col-6 pl-0" src="../../assets/john-wick-keanu.jpg" alt="">
+          </div>
+          <div class="article-subsection">While watching ‘The Suicide Squad’, I couldn’t help but be reminded
+            that the reason I was seeing the movie just the way it was ... <a href="#">continue reading</a>
+          </div>
+          <div class="pt-2 date">
+            <span class="actor font-weight-bold pr-2">By Talius Dike</span> 1 Hour Ago
+          </div>
+        </article>
+      </div>
+    </a>
+  </div>
+</div>
+

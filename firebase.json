@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/rinzyreview",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

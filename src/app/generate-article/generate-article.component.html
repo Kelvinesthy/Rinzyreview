@@ -1,0 +1,80 @@
+<div class="container my-5">
+  <div class="container my-5 p-4">
+    <nav class="navbar navbar-expand-lg dark bg-dark">
+      <div class="navbar-header navbar-right">
+        <ul class="nav navbar-nav">
+          <li>
+            <a *ngIf="!auth.isAuthenticated()" [routerLink]="['/user/login']">Login</a>
+            <a *ngIf="auth.isAuthenticated()" [routerLink]="['/user/profile']">Welcome {{auth.currentUser.firstName}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <h1>
+    Create New Articles
+  </h1>
+  <hr> <!---------newArticle.(whatever) are all binding to the newEvent object--------->
+  <form #newArticleForm="ngForm" (ngSubmit)="saveArticle(newArticleForm.value)" autocomplete="off" novalidate>
+    <div class="form-group my-5" [ngClass]="{'error':newArticleForm.controls.heading?.invalid && newArticleForm.controls.heading?.touched}">
+      <label for="articleheading" >Article Name:</label>
+      <em *ngIf="newArticleForm.controls.heading?.invalid && newArticleForm.controls.heading?.touched">Required</em>
+      <input (ngModel)="newArticle.heading" required name="heading" type="text" id="heading" class="form-control" placeholder="Input your header name">
+    </div>
+    <div class="form-group my-5" [ngClass]="{'error':newArticleForm.controls.date?.invalid && newArticleForm.controls.date?.touched}">
+      <label for="articleDate" >Article Date:</label>
+      <em *ngIf="newArticleForm.controls.date?.invalid && (newArticleForm.controls.date?.touched)">Required</em>
+      <input (ngModel)="newArticle.date" required name="date" type="text" id="articleDate" class="form-control" placeholder="format (mm/dd/yyyy)......">
+    </div>
+    <div class="form-group my-5" [ngClass]="{'error':newArticleForm.controls.imageUrl?.invalid && newArticleForm.controls.imageUrl?.touched}">
+      <label for="imageUrl" > Article Image input</label>
+      <em *ngIf="newArticleForm.controls.imageUrl?.invalid && (newArticleForm.controls.imageUrl?.touched && newArticleForm.controls.imageUrl?.errors.required)">Required</em>
+      <em *ngIf="newArticleForm.controls.imageUrl?.invalid && (newArticleForm.controls.imageUrl?.touched && newArticleForm.controls.imageUrl?.errors.pattern)">Must be a png or jpg url</em>
+      <input (ngModel)="newArticle.imageUrl" required name="imageUrl" type="file" id="inputfile" class="form-control" pattern=".*\/.*.(png|jpg)">
+      <img src="newArticleForm.controls.imageUrl.value" *ngIf="newArticleForm.controls.imageUrl?.valid">
+    </div>
+    <div class="form-group my-5" [ngClass]="{'error':newArticleForm.controls.message?.invalid && newArticleForm.controls.message?.touched}">
+      <label for="articleMessage" >Article message</label>
+      <em *ngIf="newArticleForm.controls.message?.invalid && newArticleForm.controls.message?.touched">Required</em>
+      <textarea name="message" required (ngModel)="newArticle.message" id="myTextarea" cols="50" rows="10" class="form-control" placeholder="Place your articles message here"></textarea>
+    </div>
+    <div class="button-group" *ngIf="auth.isAuthenticated()">
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-default" [disabled]="newArticleForm.invalid" (click)='cancel()'>Cancel</button>
+    </div>
+    <editor
+      class="centered"
+      formcontrolName ="content"
+      [init]="{
+        height: 500,
+        baseurl: '/tinymce',
+        suffix: '.min',
+        selector: '#myTextarea',
+        menubar: 'file edit view insert format tools table help',
+        autosave_prefix: '{path}{query}-{id}-',
+        imagetools_cors_hosts: ['picsum.photos'],
+        plugins: [
+        'advlist autolink lists link image charmap print preview anchor',
+        'searchreplace visualblocks code fullscreen',
+        'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar_sticky: true,
+        autosave_ask_before_unload: true,
+        autosave_interval: '30s',
+        autosave_restore_when_empty: false,
+        autosave_retention: '2m',
+        image_advtab: true,
+        template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+        template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+        image_caption: true,
+        quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+        noneditable_noneditable_class: 'mceNonEditable',
+        toolbar_mode: 'sliding',
+        contextmenu: 'link image imagetools table',
+        toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect
+         | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat
+          | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl'
+      }"
+    ></editor>
+  </form>
+</div>

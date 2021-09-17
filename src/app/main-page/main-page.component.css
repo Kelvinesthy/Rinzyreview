@@ -1,0 +1,219 @@
+/*----- Carousel section-------*/
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 1rem;
+  z-index: 10;
+  padding: 15px 0;
+}
+
+.carousel-caption p{
+  font-size: small;
+}
+.bg-dark-main{
+  background-color: black;
+}
+
+.carousel-item {
+  height: 35rem;
+  max-width: 100vw;
+}
+
+.welcome-carousel-image1{
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+  background-image:url('../../assets/IMG-20200723-WA0042.jpg');
+}
+
+.welcome-carousel-image2{
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+  background-image:url('../../assets/john-wick-keanu.jpg');
+}
+
+.welcome-carousel-image3{
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+  background-image:url('../../assets/scale.jpeg');
+}
+
+.welcome-carousel-image4{
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+  background-image:url('../../assets/IMG-20200723-WA0033.jpg');
+}
+
+.welcome-carousel-image5{
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+  background-image:url('../../assets/IMG-20200723-WA0038.jpg');
+}
+
+.welcome-carousel-image1, .welcome-carousel-image2, .welcome-carousel-image3,
+.welcome-carousel-image4, .welcome-carousel-image5{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel-control-next, .carousel-control-prev{
+  background-color: rgb(0, 0, 0);
+  opacity: 0.19;
+}
+.carousel-indicators{
+  bottom: -16px;
+  background-color: black;
+}
+.tags span{
+  background-color: red;
+  margin-left: 5px;
+}
+.tags{
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+}
+.tags .romance{
+  background-color: green;
+}
+.tags .tv-series{
+  background-color: yellow;
+}
+.tags .comdey{
+  background-color: brown;
+}
+.tags .general{
+  background-color: blue;
+}
+.tags span:first-child{
+  margin-left: 0px;
+}
+.rinzyreviews-private-section h3{
+  text-transform: capitalize;
+}
+.rinzyreviews-private-section .date{
+  font-weight: 600;
+  font-size: small;
+}
+.rinzyreviews-private-section-text{
+  font-size: small;
+}
+.rinzyreviews-private-section-text, .rinzyreviews-private-section h3, .rinzyreviews-private-section .date,
+.carousel-caption p, .carousel-caption h3, .rinzyreviews-article-section h4, .rinzyreviews-article-section .article-subsection,
+.article-heading h6, .article-subheading{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.reviews{
+  padding: 0px;
+}
+.reviews h3{
+  border-bottom: black 1px solid;
+}
+
+.img-fluid{
+  height: 300px;
+}
+.carousel-caption{
+  left: 0%;
+  right: 0%;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+  .welcome-carousel-image1, .welcome-carousel-image2, .welcome-carousel-image3,
+  .welcome-carousel-image4, .welcome-carousel-image5{
+    background-size: cover;
+  }
+  .reviews{
+    padding: 0px;
+  }
+  .img-fluid{
+    height: 240px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
+  .carousel-caption p{
+    font-size: x-small;
+  }
+  .carousel-caption h3{
+    font-size: larger;
+  }
+  .tags{
+    margin-bottom: 15px;
+  }
+  .tags span{
+    margin-left: 2px;
+  }
+  .rinzyreviews-private-section .article-subsection{
+    font-size: small;
+  }
+  .welcome-carousel-image1, .welcome-carousel-image2, .welcome-carousel-image3,
+  .welcome-carousel-image4, .welcome-carousel-image5{
+    background-size: cover;
+  }
+  .reviews{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (min-width: 768px){
+
+}
+@media only screen and (max-width: 767px){
+  .carousel-caption h3{
+    font-size: 1rem;
+  }
+  p{
+    font-size: 0.6rem;
+  }
+  .display-sm{
+    display: none;
+  }
+  .hidden-xs{
+    display: none;
+  }
+  .img-fluid{
+    height: auto;
+    width: -webkit-fill-available;
+  }
+  .tags{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+  .tags span{
+    margin-left: 1;
+    font-size: xx-small;
+  }
+  .carousel-item {
+    height: 24rem;
+  }
+  .carousel-caption h3{
+    font-size: smaller;
+  }
+  .carousel-caption p{
+    font-size: xx-small;
+  }
+  .welcome-carousel-image1, .welcome-carousel-image2, .welcome-carousel-image3,
+  .welcome-carousel-image4, .welcome-carousel-image5{
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel-caption{
+    padding: 0px;
+  }
+  .col-12{
+    padding: 0px;
+  }
+  .reviews{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .reviews .tags{
+    margin-top: auto;
+  }
+  article{
+    padding-top: 13px;
+  }
+  .date{
+    font-size: smaller;
+  }
+}
